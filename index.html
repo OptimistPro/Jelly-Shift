@@ -158,7 +158,9 @@ function ShowAdVideo() {
     .catch(error => VideoErrol());
 	}
 
-
+	function	ShowPodel(nomber){
+	vkBridge.send("VKWebAppShowWallPostBox", {"Новый уровень пройден!": "Я прошёл уровень "+nomber+"! Присоединяйся ко мне в игре Jelly Shift!"});
+	}
 </script>
 
 <script type="text/javascript">
