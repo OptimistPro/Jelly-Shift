@@ -151,9 +151,9 @@ vkBridge.send("VKWebAppShowNativeAds", {ad_format:"interstitial"})
 	   }
 
 function ShowAdVideo() {
-	vkbridge.send("VKWebAppCheckNativeAds", {"ad_format": "reward"});
+	vkBridge.send("VKWebAppCheckNativeAds", {"ad_format": "reward"});
 
-    vkbridge.send("VKWebAppShowNativeAds", {ad_format:"reward"})
+    vkBridge.send("VKWebAppShowNativeAds", {ad_format:"reward"})
     .then(data => VideoClose())
     .catch(error => VideoErrol());
 	}
