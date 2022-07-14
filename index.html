@@ -233,7 +233,7 @@ var vabor_block = new Howl({src: ['sounds/vabor_block.mp3'], loop: false});
 	<script type='text/javascript' src='index.js'></script>
 	<script type='text/javascript'>//<![CDATA[
 
-		const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":8061776,"index.wasm":11795271},"focusCanvas":true,"gdnativeLibs":[]};
+		const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":8061776,"index.wasm":13361385},"focusCanvas":true,"gdnativeLibs":[]};
 		var engine = new Engine(GODOT_CONFIG);
 
 		(function() {
@@ -242,6 +242,12 @@ var vabor_block = new Howl({src: ['sounds/vabor_block.mp3'], loop: false});
 			var statusProgressInner = document.getElementById('status-progress-inner');
 			var statusIndeterminate = document.getElementById('status-indeterminate');
 			var statusNotice = document.getElementById('status-notice');
+
+			function noimgstat() {
+				[statusProgress, statusIndeterminate, statusNotice].forEach(elem => {
+					elem.style.display = 'none';
+				});
+			}
 
 			var initializing = true;
 			var statusMode = 'hidden';
